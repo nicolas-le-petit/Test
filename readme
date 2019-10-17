@@ -1,0 +1,25 @@
+*Initital
+
+git --version -> check version
+
+*Config
+
+git config user.name = "user_name"//config user name
+git config user.email = "user_email"//config email
+
+*Set up
+
+//go to path
+
+right click -> Git Bash Here -> 
+Cmd -> git init
+
+
+//Push project to github
+git add <file> / git add . (all)
+git commit -m <"explain">
+git remote add <name> <url>
+git push --set-upstream <name> <branch>
+
+//fetch project to pc
+git clone <url>
