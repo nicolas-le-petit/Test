@@ -14,6 +14,10 @@ git config user.email = "user_email"//config email
 right click -> Git Bash Here -> 
 Cmd -> git init
 
+//check
+git status -> check commit status
+git log -> log list commit
+
 
 //Push project to github
 git add <file> / git add . (all)
@@ -23,3 +27,11 @@ git push --set-upstream <name> <branch>
 
 //fetch project to pc
 git clone <url>
+
+//revert local
+git log -> lay id commit
+git revert <id>
+
+//change on Github
+//get new version in github
+git pull
