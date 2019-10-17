@@ -3,7 +3,6 @@ sheet_tutor = 'Tutor_register';
 sheet_student = 'Learner_register';
 sheet_email = 'Email_address';
 form_student_id = 'https://docs.google.com/forms/d/1Cit5s4LO12IFWOi910oJuY2SNsTayv5xTJsHv15YtMg/edit';
-//message = "Test";
 ld_email = 'dinhngoc.phuoc@heineken.com';
 
 function getColbyTitle(link, sheetName, colTitle){
@@ -117,6 +116,7 @@ function booking(){
     { 
       var subject = "Booking Fail!";
       var tutor_booked = data[i][1];//Tutor name
+      //var tutor_email = find_feedback(link_Data_base,sheet_email,1,tutor_booked,2);//Tutor email
       var to_email = student_email;
       var cc_email = ld_email;
       var message = 'Dear Mr/Ms. ' + student_booked + ',\n\n' +
@@ -127,7 +127,6 @@ function booking(){
       MailApp.sendEmail(to_email, subject, message, {
                             cc: cc_email});//gui mail cho hoc vien
       s.getRange(i+1, 8).setValue("Sent mail");
-      break;
     } 
       //SpreadsheetApp.getActiveSheet().getSheetName(sheet_student).getRange(i+1, 4).setValue("Done");
     
