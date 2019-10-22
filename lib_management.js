@@ -1,35 +1,25 @@
 /*======================================================================
-Define to combine all utilities functions on GGScript as a library
+Define to manage HVBQN Library
+The function include:
+Booking
+
 @ Author: DungTT
 @ Date  : 16 Oct 19
 @ Version: 1.0
 
 ======================================================================*/
 
-/*=================================***==================================*/
-
 /*======================================================================
-Including Trigger function on GGScripts
+Including define variable
 ======================================================================*/
 
-/**
- * The event handler triggered when opening the spreadsheet.
- * @param {Event} e The onOpen event.
- */
-function onOpen() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var menu = [ 
-    {name: "1. Update Form", functionName: "update_form"},
-    null,
-  ];  
-  ss.addMenu("Admin Tab", menu);
-}
-
-
-/*=================================***==================================*/
+link_ss = 'https://docs.google.com/spreadsheets/d/1sRPwYmoWTkUu0cvy59EKZMjw1MKuPU1NxEXKYZjXOZo/edit?usp=sharing';
+sheet_register = 'Register';
+sheet_booklist = 'BookList';
+date_off_set = 30*24*60*60;//second
 
 /*======================================================================
-Including processing data function on GGSheet
+Including utilities Function
 ======================================================================*/
 
 /**
@@ -86,31 +76,6 @@ function getDatabyCol(link, sheetName, colTitle){
   return coldata;
 }
 
-
-/**
- * Version: 1.0
- * Author : DungTT	
- * Get all data of column by header
- * @param : link to GGsheet
- 			sheet name
- 			header of col
- * @return: array of col data
- */
-
-/*function find_lastrow(link, sheetName, col){
-  var ss = SpreadsheetApp.openByUrl(link);
-  var s = ss.getSheetByName(sheetName);
-  var dataRange = s.getDataRange();
-  var data = dataRange.getValues();
-  //return data[data.length-1][col];
- for (var i = data.length; i++) {
-   if (data[i][3] == ''){;
-     s.getRange(i+1, 4).setValue("Done");
-     return data[i][2];
-   }
- }  
-}*/
-
 /**
  * Version: 1.0
  * Author : DungTT	
@@ -143,8 +108,23 @@ function vlook_up(link, sheetname_src, reference, sheetname_des, col_refer, col_
  }  
 }
 
-/*=================================***==================================*/
-
 /*======================================================================
-Including timing function on GGScript
+Including main Function
 ======================================================================*/
+
+/**
+ * Version: 1.0
+ * Author : DungTT	
+ * Check the book is available on list
+ * @param : link to GGsheet
+ 			sheet name source
+ 			data to vlook_up
+ 			sheet name destination
+ 			number of column refer
+ 			number of column finding
+ 			
+ * @return: data need to find
+ */
+function check_book(){
+  var ss = SpreadsheetApp.openByUrl(link_ss);
+}
