@@ -13,10 +13,10 @@ Booking
 Including define variable
 ======================================================================*/
 
-link_ss = 'https://docs.google.com/spreadsheets/d/1sRPwYmoWTkUu0cvy59EKZMjw1MKuPU1NxEXKYZjXOZo/edit?usp=sharing';
-sheet_register = 'Register';
-sheet_booklist = 'BookList';
-date_off_set = 30*24*60*60;//second
+const link_ss = 'https://docs.google.com/spreadsheets/d/1sRPwYmoWTkUu0cvy59EKZMjw1MKuPU1NxEXKYZjXOZo/edit?usp=sharing';
+const sheet_register = 'Register';
+const sheet_booklist = 'BookList';
+const date_off_set = 30*24*60*60;//second
 
 /*======================================================================
 Including utilities Function
@@ -30,6 +30,7 @@ Including utilities Function
  			sheet name
  			header of col
  * @return: number of column
+ 			-1 if can not find
  */
 function getColbyTitle(link, sheetName, colTitle){
   var ss = SpreadsheetApp.openByUrl(link);
@@ -43,6 +44,7 @@ function getColbyTitle(link, sheetName, colTitle){
       return i;
     }
   }
+  return -1;
 }
 
 /**
@@ -88,6 +90,7 @@ function getDatabyCol(link, sheetName, colTitle){
  			number of column finding
  			
  * @return: data need to find
+ 			N/A if can not find
  */
 
 function vlook_up(link, sheetname_src, reference, sheetname_des, col_refer, col_find){
@@ -106,6 +109,7 @@ function vlook_up(link, sheetname_src, reference, sheetname_des, col_refer, col_
      return data[i][col_find];
    }
  }  
+ return "N/A";
 }
 
 /*======================================================================
@@ -125,6 +129,18 @@ Including main Function
  			
  * @return: data need to find
  */
+
+ //open Register
+ //get id
+ //get timestamp
+ //open Booklist
+ //vlookup -> row -> yes:no? book tittle/status:add new row
+ //send mail
 function check_book(){
-  var ss = SpreadsheetApp.openByUrl(link_ss);
+  var ss_src = SpreadsheetApp.openByUrl(link_ss);
+  var s_src  = ss_src.getSheetByName(sheet_register);
+  var dataRange_src = s_src.getDataRange();
+  var data_src = dataRange_src.getValues();
+
+  var book_id = 
 }
