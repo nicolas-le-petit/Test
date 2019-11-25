@@ -44,12 +44,16 @@ git add .
 git commit -m "message"
 git log (check)
 git remote add <name> <url>
-git push -u <name> <branch>
+//git push -u <name> <branch>
+git push --set-upstream <name> <branch> -> push the repo in local PC to Internet
+
+git branch <name> -> make new branch
+git checkout <name> -> jump to new branch <name>
+git merge <name> -> merge branch <name> to master
+
+truong hop bi conflict
 
 sua test choi
-<<<<<<< HEAD
 
 test conflict choi
-=======
-con tao cung vay
->>>>>>> 9902d35d31033bc84a34fe0758ebf1e396c0b94d
+
