@@ -45,3 +45,5 @@ git commit -m "message"
 git log (check)
 git remote add <name> <url>
 git push -u <name> <branch>
+
+sua test choi
