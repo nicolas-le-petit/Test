@@ -47,5 +47,9 @@ git remote add <name> <url>
 git push -u <name> <branch>
 
 sua test choi
+<<<<<<< HEAD
 
 test conflict choi
+=======
+con tao cung vay
+>>>>>>> 9902d35d31033bc84a34fe0758ebf1e396c0b94d
