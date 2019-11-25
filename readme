@@ -12,7 +12,7 @@ git config user.email = "user_email"//config email
 //go to path
 
 right click -> Git Bash Here -> 
-Cmd -> git init
+Cmd -> git init -> make a repo in local PC
 
 //check
 git status -> check commit status
@@ -20,13 +20,13 @@ git log -> log list commit
 
 
 //Push project to github
-git add <file> / git add . (all)
-git commit -m <"explain">
+git add <file> / git add . (all) -> add new state/change in repo
+git commit -m <"explain"> -> commit the change
 git remote add <name> <url>
 git push --set-upstream <name> <branch>
 
 //fetch project to pc
-git clone <url>
+git clone <url> -> take a repo from Internet via url
 
 //revert local
 git log -> lay id commit
