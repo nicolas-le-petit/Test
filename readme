@@ -47,3 +47,5 @@ git remote add <name> <url>
 git push -u <name> <branch>
 
 sua test choi
+
+test conflict choi
