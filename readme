@@ -22,8 +22,8 @@ git log -> log list commit
 //Push project to github
 git add <file> / git add . (all) -> add new state/change in repo
 git commit -m <"explain"> -> commit the change
-git remote add <name> <url>
-git push --set-upstream <name> <branch>
+git remote add <name> <url> -> announce a repo <name> 
+git push --set-upstream <name> <branch> -> push the repo in local PC to Internet
 
 //fetch project to pc
 git clone <url> -> take a repo from Internet via url
@@ -35,3 +35,13 @@ git revert <id>
 //change on Github
 //get new version in github
 git pull
+
+
+process:
+git init
+git status (check)
+git add .
+git commit -m "message"
+git log (check)
+git remote add <name> <url>
+git push -u <name> <branch>
